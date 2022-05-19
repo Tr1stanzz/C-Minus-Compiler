@@ -3,7 +3,7 @@ SYMBOL = .tac
 build:
 	flex -o src/lex.yy.c src/parser.l
 	bison -o src/parser.tab.c src/parser.y
-	gcc -g src/parser.tab.c -ll -ly -o parser
+	gcc -g src/parser.tab.c -o parser
 
 test:
 	./parser src/test/$(TEST_FILE)
